@@ -1,4 +1,4 @@
-const link = "https://thbarkouki.limesurvey.net/436894?lang=en";
+const link = "https://thbarkouki.limesurvey.net/436894?newtest=Y&lang=en";
 
 const linkElement = document.getElementById("link");
 
