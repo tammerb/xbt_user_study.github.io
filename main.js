@@ -1,17 +1,12 @@
-const link = "https://thbarkouki.limesurvey.net/954158?lang=en";
+const links = [
+    "https://thbarkouki.limesurvey.net/954158?lang=en",
+    "https://thbarkouki.limesurvey.net/215748?lang=en"
+    ];
 
-const linkElement = document.getElementById("link");
+function redirectToRandomWebsite() {
+    const randomIndex = Math.floor(Math.random() * links.length);
 
-document.addEventListener("DOMContentLoaded", function() {
+    window.location.href = links[randomIndex];
+}
 
-    function updateLinkAndRedirect() {
-        linkElement.href = link;
-
-        // Automatically redirect to the updated link
-        window.location.href = linkElement.href;
-        
-        //currentIndex = (currentIndex + 1) % links.length; // Cycle through the links
-    }
-
-    updateLinkAndRedirect();
-});
+window.onload = redirectToRandomWebsite;
